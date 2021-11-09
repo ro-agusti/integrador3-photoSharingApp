@@ -23,6 +23,7 @@ namespace PhotoSharingApplication.Models
             }
             return fileBytes;
         }
+
         protected override void Seed(PhotoSharingContext context)
         {
             var photos = new List<Photo>

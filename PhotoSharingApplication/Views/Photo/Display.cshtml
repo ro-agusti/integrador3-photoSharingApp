@@ -1,20 +1,11 @@
 ﻿@model PhotoSharingApplication.Models.Photo
 
 @{
-    Layout = null;
+    ViewBag.Title = Model.Title;
 }
 
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title> Photo: @Model.Title</title>
-</head>
-<body>
-    <div>
         <h2>"@Model.Title"</h2>
-        <img width="800" src="@Url.Action("GetImage", "Photo",new { id = Model.PhotoID })" />
+        <img class="photo-metadata" src="@Url.Action("GetImage", "Photo",new { id = Model.PhotoID })" />
         <p>
             @Html.DisplayFor(model => model.Description)
         </p>
@@ -29,7 +20,3 @@
         <p>
             @Html.ActionLink("Back to List", "Index")
         </p>
-
-    </div>
-</body>
-</html>

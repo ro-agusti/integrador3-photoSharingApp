@@ -41,7 +41,6 @@ select p).Take(number).ToList();
 
         }
 
-
         public ActionResult Display(int id)
         {
             Photo photo = context.Photos.Find(id);
